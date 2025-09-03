@@ -1,4 +1,4 @@
-{% set version = "0.4.3" %}
+{% set version = "0.4.4" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/PlackettLuce_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PlackettLuce/PlackettLuce_{{ version }}.tar.gz
-  sha256: cd339e2809a91edfb4ab0bc61040482414a1fa093afe425e1d7538cd436af112
+  sha256: ad3674c0f71786b41922c0f2e7162e94e6b8a67dc7343bed603db13aec12bb3a
 
 build:
-  number: 2
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
