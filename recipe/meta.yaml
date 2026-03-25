@@ -1,4 +1,4 @@
-{% set version = "0.4.4" %}
+{% set version = "0.4.5" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/PlackettLuce_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/PlackettLuce/PlackettLuce_{{ version }}.tar.gz
-  sha256: ad3674c0f71786b41922c0f2e7162e94e6b8a67dc7343bed603db13aec12bb3a
+  sha256: 7b7d82c9ccc442833e00e113ff22672cc10ea1752fcfc4f1194e1ea97a0116d7
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -57,9 +57,10 @@ test:
 about:
   home: https://hturner.github.io/PlackettLuce/
   license: GPL-3.0-only
-  summary: Functions to prepare rankings data and fit the Plackett-Luce model jointly attributed to Plackett (1975) <doi:10.2307/2346567> and Luce (1959, ISBN:0486441369). The standard Plackett-Luce model is generalized to accommodate ties of any order in the ranking. Partial rankings, in which only a subset of items are
-    ranked in each ranking, are also accommodated in the implementation. Disconnected/weakly connected networks implied by the rankings may be handled by adding pseudo-rankings with a hypothetical item. Optionally, a multivariate normal prior may be set on the log-worth parameters and ranker reliabilities may be incorporated
-    as proposed by Raman and Joachims (2014) <doi:10.1145/2623330.2623654>. Maximum a posteriori estimation is used when priors are set. Methods are provided to estimate standard errors or quasi-standard errors for inference as well as to fit Plackett-Luce trees. See the package website or vignette for further details.
+  summary: Functions to prepare rankings data and fit the Plackett-Luce model jointly attributed to Plackett (1975) <doi:10.2307/2346567> and Luce (1959, ISBN:0486441369). The standard Plackett-Luce model is generalized to accommodate ties of any order in the ranking. Partial rankings, in which only a subset of items 
+    are ranked in each ranking, are also accommodated in the implementation. Disconnected/weakly connected networks implied by the rankings may be handled by adding pseudo-rankings with a hypothetical item. Optionally, a multivariate normal prior may be set on the log-worth parameters and ranker reliabilities may be 
+    incorporated as proposed by Raman and Joachims (2014) <doi:10.1145/2623330.2623654>. Maximum a posteriori estimation is used when priors are set. Methods are provided to estimate standard errors or quasi-standard errors for inference as well as to fit Plackett-Luce trees. See the package website or vignette for 
+    further details.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
